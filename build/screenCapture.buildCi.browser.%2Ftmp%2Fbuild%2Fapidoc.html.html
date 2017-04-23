@@ -1,0 +1,1172 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/ecomfe/fontmin#readme">fontmin (v0.9.6)</a>
+</h1>
+<h4>Minify font seamlessly, font subsetter, webfont (eot, woff, svg) converter.</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fontmin">module fontmin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.fontmin">
+            function <span class="apidocSignatureSpan"></span>fontmin
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.css">
+            function <span class="apidocSignatureSpan">fontmin.</span>css
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.glyph">
+            function <span class="apidocSignatureSpan">fontmin.</span>glyph
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.otf2ttf">
+            function <span class="apidocSignatureSpan">fontmin.</span>otf2ttf
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.super_">
+            function <span class="apidocSignatureSpan">fontmin.</span>super_
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.svg2ttf">
+            function <span class="apidocSignatureSpan">fontmin.</span>svg2ttf
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.svgs2ttf">
+            function <span class="apidocSignatureSpan">fontmin.</span>svgs2ttf
+            <span class="apidocSignatureSpan">(file, opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.ttf2eot">
+            function <span class="apidocSignatureSpan">fontmin.</span>ttf2eot
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.ttf2svg">
+            function <span class="apidocSignatureSpan">fontmin.</span>ttf2svg
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.ttf2woff">
+            function <span class="apidocSignatureSpan">fontmin.</span>ttf2woff
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fontmin.</span>mime</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fontmin.</span>plugins</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">fontmin.</span>util</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.fontmin.util">module fontmin.util</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.util.getFontFolder">
+            function <span class="apidocSignatureSpan">fontmin.util.</span>getFontFolder
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.util.getFonts">
+            function <span class="apidocSignatureSpan">fontmin.util.</span>getFonts
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.util.getPureText">
+            function <span class="apidocSignatureSpan">fontmin.util.</span>getPureText
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.util.getSubsetText">
+            function <span class="apidocSignatureSpan">fontmin.util.</span>getSubsetText
+            <span class="apidocSignatureSpan">(opts)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.util.getUniqText">
+            function <span class="apidocSignatureSpan">fontmin.util.</span>getUniqText
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.fontmin.util.string2unicodes">
+            function <span class="apidocSignatureSpan">fontmin.util.</span>string2unicodes
+            <span class="apidocSignatureSpan">(str)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fontmin" id="apidoc.module.fontmin">module fontmin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.fontmin" id="apidoc.element.fontmin.fontmin">
+        function <span class="apidocSignatureSpan"></span>fontmin
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Fontmin() {
+    if (!(this instanceof Fontmin)) {
+        return new Fontmin();
+    }
+
+    EventEmitter.call(this);
+    this.streams = [];
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.css" id="apidoc.element.fontmin.css">
+        function <span class="apidocSignatureSpan">fontmin.</span>css
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">css = function (opts) {
+    opts = opts || {};
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check ttf
+        if (!isTtf(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        // clone
+        this.push(file.clone(false));
+
+        file.path = replaceExt(file.path, '.css');
+        var fontFile = path.basename(file.path, '.css');
+
+        // font data
+        var fontInfo = {
+            fontFile: fontFile,
+            fontPath: '',
+            base64: '',
+            glyph: false,
+            iconPrefix: 'icon',
+            local: false
+        };
+
+        // opts
+        _.extend(fontInfo, opts);
+
+        // ttf obj
+        var ttfObject = file.ttfObject || {
+            name: {}
+        };
+
+        // glyph
+        if (opts.glyph &amp;&amp; ttfObject.glyf) {
+            _.extend(
+                fontInfo,
+                getGlyfList(ttfObject)
+            );
+        }
+
+        // font family
+        fontInfo.fontFamily = getFontFamily(fontInfo, ttfObject, opts);
+
+        // rewrite font family as filename
+        if (opts.asFileName) {
+            fontInfo.fontFamily = fontFile;
+        }
+
+        // base64
+        if (opts.base64) {
+            fontInfo.base64 = ''
+                + 'data:application/x-font-ttf;charset=utf-8;base64,'
+                + b2a(file.contents);
+        }
+
+        // local
+        if (fontInfo.local === true) {
+            fontInfo.local = fontInfo.fontFamily;
+        }
+
+        // render
+        var output = _.attempt(function (data) {
+            return new Buffer(renderCss(data));
+        }, fontInfo);
+
+        if (_.isError(output)) {
+            cb(output, file);
+        }
+        else {
+            file.contents = output;
+            cb(null, file);
+        }
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var fontmin = new Fontmin()
+    .use(Fontmin.ttf2svg());
+    .use(svgo());
+
+```
+
+### .<span class="apidocCodeKeywordSpan">css</span>()
+
+Generate css from ttf, often used to make iconfont.
+
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.glyph" id="apidoc.element.fontmin.glyph">
+        function <span class="apidocSignatureSpan">fontmin.</span>glyph
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">glyph = function (opts) {
+
+    opts = _.extend({hinting: true, trim: true}, opts);
+
+    // prepare subset
+    var subsetText = util.getSubsetText(opts);
+    opts.subset = util.string2unicodes(subsetText);
+
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check ttf
+        if (!isTtf(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        try {
+
+            // write file buffer
+            var miniTtf = minifyTtf(
+                file.ttfObject || file.contents,
+                opts
+            );
+
+            file.contents = miniTtf.buffer;
+            file.ttfObject = miniTtf.object;
+
+            cb(null, file);
+
+        }
+        catch (err) {
+            cb(err);
+        }
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+* [ttf2woff](#ttf2woff) â€” Convert ttf to woff.
+* [ttf2svg](#ttf2svg) â€” Convert ttf to svg.
+* [css](#css) â€” Generate css from ttf, often used to make iconfont.
+* [svg2ttf](#svg2ttf) â€” Convert font format svg to ttf.
+* [svgs2ttf](#svgs2ttf) â€” Concat svg files to a ttf, just like css sprite.
+* [otf2ttf](#otf2ttf) â€” Convert otf to ttf.
+
+### .<span class="apidocCodeKeywordSpan">glyph</span>()
+
+Compress ttf by glyph.
+
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.otf2ttf" id="apidoc.element.fontmin.otf2ttf">
+        function <span class="apidocSignatureSpan">fontmin.</span>otf2ttf
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">otf2ttf = function (opts) {
+
+    opts = _.extend({clone: false, hinting: true}, opts);
+
+    // prepare subset
+    var subsetText = util.getSubsetText(opts);
+    opts.subset = util.string2unicodes(subsetText);
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check otf
+        if (!isOtf(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        // clone
+        if (opts.clone) {
+            this.push(file.clone(false));
+        }
+
+        // replace ext
+        file.path = replaceExt(file.path, '.ttf');
+
+        // ttf info
+        var ttfBuffer;
+        var ttfObj;
+
+        // try otf2ttf
+        try {
+
+            ttfObj = otf2ttfobject(b2ab(file.contents), opts);
+
+            ttfBuffer = ab2b(new TTFWriter(opts).write(ttfObj));
+
+        }
+        catch (ex) {
+            cb(ex);
+        }
+
+        if (ttfBuffer) {
+            file.contents = ttfBuffer;
+            file.ttfObject = ttfObj;
+            cb(null, file);
+        }
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    .src('svgs/*.svg')
+    .use(Fontmin.svgs2ttf('font.ttf', {fontName: 'iconfont'}))
+    .use(Fontmin.css({
+        glyph: true
+    }));
+```
+
+### .<span class="apidocCodeKeywordSpan">otf2ttf</span>()
+
+Convert otf to ttf.
+
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.super_" id="apidoc.element.fontmin.super_">
+        function <span class="apidocSignatureSpan">fontmin.</span>super_
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function EventEmitter() {
+  EventEmitter.init.call(this);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.svg2ttf" id="apidoc.element.fontmin.svg2ttf">
+        function <span class="apidocSignatureSpan">fontmin.</span>svg2ttf
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svg2ttf = function (opts) {
+
+    opts = _.extend({clone: true, hinting: true}, opts);
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check svg
+        if (!isSvg(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        // clone
+        if (opts.clone) {
+            this.push(file.clone(false));
+        }
+
+        // replace ext
+        file.path = replaceExt(file.path, '.ttf');
+
+
+        // ttf buffer
+        var output;
+
+        try {
+
+            var ttfObj = svg2ttfobject(
+                file.contents.toString('utf-8')
+            );
+
+            output = ab2b(new TTFWriter(opts).write(ttfObj));
+
+        }
+        catch (ex) {
+            cb(ex);
+        }
+
+        if (output) {
+            file.contents = output;
+            cb(null, file);
+        }
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+        fontFamily: function(fontInfo, ttf) {
+          return "Transformed Font Family Name"
+        },
+        // ...
+    }));
+```
+
+### .<span class="apidocCodeKeywordSpan">svg2ttf</span>()
+
+Convert font format svg to ttf.
+
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.svgs2ttf" id="apidoc.element.fontmin.svgs2ttf">
+        function <span class="apidocSignatureSpan">fontmin.</span>svgs2ttf
+        <span class="apidocSignatureSpan">(file, opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">svgs2ttf = function (file, opts) {
+
+    if (!file) {
+        throw new Error('Missing file option for fontmin-svg2ttf');
+    }
+
+    opts = _.extend({hinting: true}, opts);
+
+    var firstFile;
+    var fileName;
+    var svgFont;
+
+    if (typeof file === 'string') {
+
+        // fix file ext
+        file = replaceExt(file, '.ttf');
+
+        // set file name
+        fileName = file;
+    }
+    else if (typeof file.path === 'string') {
+        fileName = path.basename(file.path);
+        firstFile = bufferToVinyl.file(null, fileName);
+    }
+    else {
+        throw new Error('Missing path in file options for fontmin-svg2ttf');
+    }
+
+
+    function bufferContents(file, enc, cb) {
+
+        // ignore empty files
+        if (file.isNull()) {
+            cb();
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            this.emit('error', new Error('Streaming not supported'));
+            cb();
+            return;
+        }
+
+        // check svg
+        if (!isSvg(file.contents)) {
+            cb();
+            return;
+        }
+
+        // set first file if not already set
+        if (!firstFile) {
+            firstFile = file;
+        }
+
+        // construct SvgFont instance
+        if (!svgFont) {
+            var fontName = opts.fontName || path.basename(fileName, '.ttf');
+            svgFont = new SvgFont(fontName, opts);
+        }
+
+        // add file to SvgFont instance
+        svgFont.add(file.relative, file.contents);
+
+        cb();
+    }
+
+
+    function endStream(cb) {
+        // no files passed in, no file goes out
+        if (!firstFile || !svgFont) {
+            cb();
+            return;
+        }
+
+        var joinedFile;
+
+        // if file opt was a file path
+        // clone everything from the first file
+        if (typeof file === 'string') {
+            joinedFile = firstFile.clone({
+                contents: false
+            });
+
+            joinedFile.path = path.join(firstFile.base, file);
+        }
+        else {
+            joinedFile = firstFile;
+        }
+
+        // complie svgfont
+        svgFont.compile();
+
+        // set contents
+        joinedFile.contents = svgFont.contents;
+        joinedFile.ttfObject = svgFont.ttf.ttf;
+
+        this.push(joinedFile);
+        cb();
+    }
+
+    return through.obj(bufferContents, endStream);
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+    .src('font.svg')
+    .use(Fontmin.svg2ttf());
+```
+
+### .<span class="apidocCodeKeywordSpan">svgs2ttf</span>()
+
+Concat svg files to a ttf, just like css sprite.
+
+awesome work with [css](#css) plugin:
+
+```js
+var Fontmin = require('fontmin');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.ttf2eot" id="apidoc.element.fontmin.ttf2eot">
+        function <span class="apidocSignatureSpan">fontmin.</span>ttf2eot
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ttf2eot = function (opts) {
+
+    opts = _.extend({clone: true}, opts);
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check ttf
+        if (!isTtf(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        // clone
+        if (opts.clone) {
+            this.push(file.clone(false));
+        }
+
+        // replace ext
+        file.path = replaceExt(file.path, '.eot');
+
+        compileTtf(file.contents, function (err, buffer) {
+
+            if (err) {
+                cb(err);
+                return;
+            }
+
+            file.contents = buffer;
+            cb(null, file);
+        });
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var fontmin = new Fontmin()
+    .use(Fontmin.glyph({
+        text: 'å¤©åœ°çŽ„é»„ å®‡å®™æ´ªè’',
+        hinting: false         // keep ttf hint info (fpgm, prep, cvt). default = true
+    }));
+```
+
+### .<span class="apidocCodeKeywordSpan">ttf2eot</span>()
+
+Convert ttf to eot.
+
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.ttf2svg" id="apidoc.element.fontmin.ttf2svg">
+        function <span class="apidocSignatureSpan">fontmin.</span>ttf2svg
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ttf2svg = function (opts) {
+
+    opts = _.extend({clone: true}, opts);
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check ttf
+        if (!isTtf(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        // clone
+        if (opts.clone) {
+            this.push(file.clone(false));
+        }
+
+        // replace ext
+        file.path = replaceExt(file.path, '.svg');
+
+        compileTtf(file.contents, function (err, buffer) {
+
+            if (err) {
+                cb(err);
+                return;
+            }
+
+            file.contents = buffer;
+            cb(null, file);
+        });
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+var fontmin = new Fontmin()
+    .use(Fontmin.ttf2woff({
+        deflate: true           // deflate woff. default = false
+    }));
+```
+
+### .<span class="apidocCodeKeywordSpan">ttf2svg</span>()
+
+Convert ttf to svg.
+
+you can use [imagemin-svgo](https://github.com/imagemin/imagemin-svgo) to compress svg:
+
+```js
+var Fontmin = require('fontmin');
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.ttf2woff" id="apidoc.element.fontmin.ttf2woff">
+        function <span class="apidocSignatureSpan">fontmin.</span>ttf2woff
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">ttf2woff = function (opts) {
+
+    opts = _.extend({clone: true}, opts);
+
+    return through.ctor({
+        objectMode: true
+    }, function (file, enc, cb) {
+
+        // check null
+        if (file.isNull()) {
+            cb(null, file);
+            return;
+        }
+
+        // check stream
+        if (file.isStream()) {
+            cb(new Error('Streaming is not supported'));
+            return;
+        }
+
+        // check ttf
+        if (!isTtf(file.contents)) {
+            cb(null, file);
+            return;
+        }
+
+        // clone
+        if (opts.clone) {
+            this.push(file.clone(false));
+        }
+
+        // replace ext
+        file.path = replaceExt(file.path, '.woff');
+
+        compileTtf(file.contents, opts, function (err, buffer) {
+
+            if (err) {
+                cb(err);
+                return;
+            }
+
+            file.contents = buffer;
+            cb(null, file);
+        });
+
+    });
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+    .use(Fontmin.ttf2eot());
+```
+
+### .<span class="apidocCodeKeywordSpan">ttf2woff</span>()
+
+Convert ttf to woff.
+
+```js
+var Fontmin = require('fontmin');
+
+var fontmin = new Fontmin()
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.fontmin.util" id="apidoc.module.fontmin.util">module fontmin.util</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.util.getFontFolder" id="apidoc.element.fontmin.util.getFontFolder">
+        function <span class="apidocSignatureSpan">fontmin.util.</span>getFontFolder
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFontFolder() {
+    return path.resolve({
+        win32: '/Windows/fonts',
+        darwin: '/Library/Fonts',
+        linux: '/usr/share/fonts/truetype'
+    }[process.platform]);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.util.getFonts" id="apidoc.element.fontmin.util.getFonts">
+        function <span class="apidocSignatureSpan">fontmin.util.</span>getFonts
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getFonts() {
+    return fs.readdirSync(getFontFolder());
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.util.getPureText" id="apidoc.element.fontmin.util.getPureText">
+        function <span class="apidocSignatureSpan">fontmin.util.</span>getPureText
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getPureText(str) {
+
+    return String(str)
+        .trim()
+        .replace(/[\s]/g, '')
+        // .replace(/[\f]/g, '')
+        // .replace(/[\b]/g, '')
+        // .replace(/[\n]/g, '')
+        // .replace(/[\t]/g, '')
+        // .replace(/[\r]/g, '')
+        .replace(/[\u2028]/g, '')
+        .replace(/[\u2029]/g, '');
+
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.util.getSubsetText" id="apidoc.element.fontmin.util.getSubsetText">
+        function <span class="apidocSignatureSpan">fontmin.util.</span>getSubsetText
+        <span class="apidocSignatureSpan">(opts)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getSubsetText(opts) {
+
+    var text = opts.text || '';
+
+    // trim
+    text &amp;&amp; opts.trim &amp;&amp; (text = getPureText(text));
+
+    // basicText
+    opts.basicText &amp;&amp; (text += basicText);
+
+    return getUniqText(text);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ * @api public
+ */
+module.exports = function (opts) {
+
+opts = _.extend({hinting: true, trim: true}, opts);
+
+// prepare subset
+var subsetText = util.<span class="apidocCodeKeywordSpan">getSubsetText</span>(opts);
+opts.subset = util.string2unicodes(subsetText);
+
+
+return through.ctor({
+    objectMode: true
+}, function (file, enc, cb) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.util.getUniqText" id="apidoc.element.fontmin.util.getUniqText">
+        function <span class="apidocSignatureSpan">fontmin.util.</span>getUniqText
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function getUniqText(str) {
+    return _.uniq(
+        str.split('')
+    ).join('');
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.fontmin.util.string2unicodes" id="apidoc.element.fontmin.util.string2unicodes">
+        function <span class="apidocSignatureSpan">fontmin.util.</span>string2unicodes
+        <span class="apidocSignatureSpan">(str)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function string2unicodes(str) {
+    return str.split('').map(function (text) {
+        return text.charCodeAt(0);
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+ */
+module.exports = function (opts) {
+
+    opts = _.extend({hinting: true, trim: true}, opts);
+
+    // prepare subset
+    var subsetText = util.getSubsetText(opts);
+    opts.subset = util.<span class="apidocCodeKeywordSpan">string2unicodes</span>(subsetText);
+
+
+    return through.ctor({
+objectMode: true
+    }, function (file, enc, cb) {
+
+// check null
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
